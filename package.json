@@ -16,10 +16,10 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --check"
     ],
     "*.{json,md}": [
-      "prettier --write"
+      "prettier --check"
     ]
   },
   "dependencies": {

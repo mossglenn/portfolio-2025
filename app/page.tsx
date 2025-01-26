@@ -1,101 +1,171 @@
+import { Hole } from '@/components/hole'
+import { Card } from '@/components/ui/card'
 import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className='grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20'>
-      <main className='row-start-2 flex flex-col items-center gap-8 sm:items-start'>
-        <Image
-          className='dark:invert'
-          src='/next.svg'
-          alt='Next.js logo'
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className='list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm sm:text-left'>
-          <li className='mb-2'>
-            Get started by editing{' '}
-            <code className='rounded bg-black/[.05] px-1 py-0.5 font-semibold dark:bg-white/[.06]'>
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div
+      className="home-grid grid grid-cols-12 grid-rows-[repeat(9,minmax(100px,1fr))]
+        gap-4 bg-[#1b5691] bg-[url('/img-noise-361x370_blue.png')] p-8
+        font-[family-name:var(--font-geist-sans)]"
+    >
+      {/* Hero Section */}
+      <Hole className='area-a'>
+        <Card>
+          <h1 className='text-center text-2xl font-bold'>
+            Welcome to Our Site
+          </h1>
+          <p className='text-center text-gray-600'>
+            We build awesome web experiences.
+          </p>
+        </Card>
+      </Hole>
 
-        <div className='flex flex-col items-center gap-4 sm:flex-row'>
-          <a
-            className='flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent bg-foreground px-4 text-sm text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] sm:h-12 sm:px-5 sm:text-base'
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            <Image
-              className='dark:invert'
-              src='/vercel.svg'
-              alt='Vercel logomark'
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className='flex h-10 items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm transition-colors hover:border-transparent hover:bg-[#f2f2f2] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] sm:h-12 sm:min-w-44 sm:px-5 sm:text-base'
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className='row-start-3 flex flex-wrap items-center justify-center gap-6'>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
+      {/* Image Section */}
+      <Hole className='area-x'>
+        <Card>
           <Image
-            aria-hidden
-            src='/file.svg'
-            alt='File icon'
-            width={16}
-            height={16}
+            src='/next.svg'
+            alt='Vercel Logo'
+            width={100}
+            height={100}
+            className='mx-auto'
           />
-          Learn
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='/window.svg'
-            alt='Window icon'
-            width={16}
-            height={16}
+          <p className='mt-2 text-center'>Powered by Next.js</p>
+        </Card>
+      </Hole>
+
+      {/* Call-to-Action */}
+      <Hole className='area-y'>
+        <Card>
+          <h2 className='text-xl font-semibold'>Get Started</h2>
+          <p>Click below to explore our features.</p>
+          <button className='mt-4 rounded-lg bg-blue-500 px-4 py-2 text-white'>
+            Learn More
+          </button>
+        </Card>
+      </Hole>
+
+      {/* Services List */}
+      <Hole className='area-b'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Our Services</h2>
+          <ul className='mt-2 list-disc pl-5'>
+            <li>Web Development</li>
+            <li>UI/UX Design</li>
+            <li>SEO Optimization</li>
+            <li>Hosting Solutions</li>
+          </ul>
+        </Card>
+      </Hole>
+
+      {/* Testimonial */}
+      <Hole className='area-c'>
+        <Card>
+          <blockquote className='italic'>
+            &ldquo;This is the best platform we have ever used! 10/10
+            recommended.&rdquo;
+          </blockquote>
+          <p className='mt-2 text-right font-bold'>— Happy Client</p>
+        </Card>
+      </Hole>
+
+      {/* Contact Section */}
+      <Hole className='area-d'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Contact Us</h2>
+          <p>Email: contact@company.com</p>
+          <p>Phone: +1 (123) 456-7890</p>
+        </Card>
+      </Hole>
+
+      {/* Newsletter Signup */}
+      <Hole className='area-e'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Stay Updated</h2>
+          <input
+            type='email'
+            placeholder='Enter your email'
+            className='mt-2 w-full rounded-lg border p-2'
           />
-          Examples
-        </a>
-        <a
-          className='flex items-center gap-2 hover:underline hover:underline-offset-4'
-          href='https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <Image
-            aria-hidden
-            src='/globe.svg'
-            alt='Globe icon'
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <button className='mt-2 w-full rounded-lg bg-green-500 px-4 py-2 text-white'>
+            Subscribe
+          </button>
+        </Card>
+      </Hole>
+
+      {/* Team Section */}
+      <Hole className='area-f'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Meet Our Team</h2>
+          <p>
+            We&apos;re a group of passionate developers and designers.
+          </p>
+        </Card>
+      </Hole>
+
+      {/* FAQ */}
+      <Hole className='area-g'>
+        <Card>
+          <h2 className='text-lg font-semibold'>FAQ</h2>
+          <details className='mt-2'>
+            <summary className='cursor-pointer'>
+              What services do you offer?
+            </summary>
+            <p className='mt-1 text-gray-600'>
+              We offer web development, UI/UX design, and more.
+            </p>
+          </details>
+        </Card>
+      </Hole>
+
+      {/* Fun Fact */}
+      <Hole className='area-h'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Fun Fact</h2>
+          <p>
+            Did you know? The first website was published in 1991.
+          </p>
+        </Card>
+      </Hole>
+
+      {/* Portfolio */}
+      <Hole className='area-i'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Our Work</h2>
+          <p>Check out some of our latest projects.</p>
+          <button className='mt-2 rounded-lg bg-purple-500 px-4 py-2 text-white'>
+            View Portfolio
+          </button>
+        </Card>
+      </Hole>
+
+      {/* Social Media Links */}
+      <Hole className='area-j'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Follow Us</h2>
+          <div className='mt-2 flex gap-4'>
+            <a
+              href='#'
+              className='text-blue-600'
+            >
+              Twitter
+            </a>
+            <a
+              href='#'
+              className='text-red-600'
+            >
+              YouTube
+            </a>
+            <a
+              href='#'
+              className='text-blue-900'
+            >
+              LinkedIn
+            </a>
+          </div>
+        </Card>
+      </Hole>
     </div>
   )
 }

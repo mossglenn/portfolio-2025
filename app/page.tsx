@@ -6,11 +6,10 @@ export default function Home() {
   return (
     <div
       className="home-grid grid grid-cols-12 grid-rows-[repeat(9,minmax(100px,1fr))]
-        gap-4 bg-[#1b5691] bg-[url('/img-noise-361x370_blue.png')] p-8
+        gap-1 bg-[#1b5691] bg-[url('/img-noise-361x370_blue.png')] p-4
         font-[family-name:var(--font-geist-sans)]"
     >
-      {/* Hero Section */}
-      <Hole className='area-a'>
+      <Hole className='hero'>
         <Card>
           <h1 className='text-center text-2xl font-bold'>
             Welcome to Our Site
@@ -21,8 +20,20 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Image Section */}
-      <Hole className='area-x'>
+      <Hole className='portfolio'>
+        <Card>
+          <h2 className='text-lg font-semibold'>Our Work</h2>
+          <p>Check out some of our latest projects.</p>
+          <button className='mt-2 rounded-lg bg-purple-500 px-4 py-2 text-white'>
+            View Portfolio
+          </button>
+        </Card>
+      </Hole>
+
+      <Hole
+        className='topic1'
+        hPercent={90}
+      >
         <Card>
           <Image
             src='/next.svg'
@@ -35,19 +46,23 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Call-to-Action */}
-      <Hole className='area-y'>
+      <Hole className='extra1'>
         <Card>
-          <h2 className='text-xl font-semibold'>Get Started</h2>
-          <p>Click below to explore our features.</p>
-          <button className='mt-4 rounded-lg bg-blue-500 px-4 py-2 text-white'>
-            Learn More
-          </button>
+          <Image
+            src='/next.svg'
+            alt='Vercel Logo'
+            width={100}
+            height={100}
+            className='mx-auto'
+          />
+          <p className='mt-2 text-center'>Powered by Next.js</p>
         </Card>
       </Hole>
 
-      {/* Services List */}
-      <Hole className='area-b'>
+      <Hole
+        className='project1'
+        hPercent={90}
+      >
         <Card>
           <h2 className='text-lg font-semibold'>Our Services</h2>
           <ul className='mt-2 list-disc pl-5'>
@@ -59,8 +74,11 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Testimonial */}
-      <Hole className='area-c'>
+      <Hole
+        className='topic2'
+        hPercent={85}
+        wPercent={110}
+      >
         <Card>
           <blockquote className='italic'>
             &ldquo;This is the best platform we have ever used! 10/10
@@ -70,8 +88,10 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Contact Section */}
-      <Hole className='area-d'>
+      <Hole
+        className='project2'
+        wPercent={90}
+      >
         <Card>
           <h2 className='text-lg font-semibold'>Contact Us</h2>
           <p>Email: contact@company.com</p>
@@ -79,8 +99,10 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Newsletter Signup */}
-      <Hole className='area-e'>
+      <Hole
+        className='topic3'
+        hPercent={110}
+      >
         <Card>
           <h2 className='text-lg font-semibold'>Stay Updated</h2>
           <input
@@ -94,8 +116,7 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Team Section */}
-      <Hole className='area-f'>
+      <Hole className='project3'>
         <Card>
           <h2 className='text-lg font-semibold'>Meet Our Team</h2>
           <p>
@@ -104,8 +125,10 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* FAQ */}
-      <Hole className='area-g'>
+      <Hole
+        className='resume'
+        wPercent={90}
+      >
         <Card>
           <h2 className='text-lg font-semibold'>FAQ</h2>
           <details className='mt-2'>
@@ -119,29 +142,11 @@ export default function Home() {
         </Card>
       </Hole>
 
-      {/* Fun Fact */}
-      <Hole className='area-h'>
-        <Card>
-          <h2 className='text-lg font-semibold'>Fun Fact</h2>
-          <p>
-            Did you know? The first website was published in 1991.
-          </p>
-        </Card>
-      </Hole>
-
-      {/* Portfolio */}
-      <Hole className='area-i'>
-        <Card>
-          <h2 className='text-lg font-semibold'>Our Work</h2>
-          <p>Check out some of our latest projects.</p>
-          <button className='mt-2 rounded-lg bg-purple-500 px-4 py-2 text-white'>
-            View Portfolio
-          </button>
-        </Card>
-      </Hole>
-
-      {/* Social Media Links */}
-      <Hole className='area-j'>
+      <Hole
+        className='footer'
+        hPercent={75}
+        wPercent={90}
+      >
         <Card>
           <h2 className='text-lg font-semibold'>Follow Us</h2>
           <div className='mt-2 flex gap-4'>

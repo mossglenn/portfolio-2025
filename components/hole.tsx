@@ -1,13 +1,33 @@
 'use client'
 
+import clsx from 'clsx'
+
 interface HoleProps {
   children: React.ReactNode
   className?: string // Allows grid positioning to be passed dynamically
+  hPercent?: number
+  wPercent?: number
+  align?: 'start' | 'center' | 'end' | 'stretch' // Controls vertical alignment in grid
+  justify?: 'start' | 'center' | 'end' | 'stretch' // Controls horizontal alignment in grid
 }
 
-export function Hole({ children, className = '' }: HoleProps) {
+export function Hole({
+  children,
+  className,
+  hPercent = 100,
+  wPercent = 100,
+}: HoleProps) {
+  const isFullSize = hPercent === 100 && wPercent === 100
+
   return (
-    <div className={`${className} relative size-full`}>
+    <div
+      className={clsx('relative', className)}
+      style={{
+        height: `${hPercent}%`,
+        width: `${wPercent}%`,
+        ...(isFullSize ? {} : { margin: 'auto' }), // Centers when not full size
+      }}
+    >
       {/* Container that ensures content fits inside */}
       <div className='flex size-full items-center justify-center p-5'>
         {/* Card Container with inset shadow */}

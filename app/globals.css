@@ -8,53 +8,53 @@ body {
 
 .home-grid {
   display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.9fr 1.1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(9, 1fr);
+  gap: 0px 0px;
   grid-template-areas:
-    'a a a a a a x x x y y y'
-    'a a a a a a x x x y y y'
-    'a a a a a a x x x y y y'
-    'b b b b b b b c c c c c'
-    'b b b b b b b c c c c c'
-    'd d d d d d d e e e e e'
-    'd d d d d d d f f f f f'
-    'g g g g g g g h h h h h'
-    'i i i i i i j j j j j j';
+    'hero hero hero hero hero hero hero portfolio portfolio portfolio portfolio portfolio'
+    'hero hero hero hero hero hero hero topic1 topic1 project1 project1 project1'
+    'hero hero hero hero hero hero hero topic1 topic1 project1 project1 project1'
+    'topic2 topic2 project2 project2 project2 project2 project2 project2 project2 project1 project1 project1'
+    'topic2 topic2 project2 project2 project2 project2 project2 project2 project2 project1 project1 project1'
+    'topic2 topic2 extra1 extra1 extra1 topic3 topic3 topic3 topic3 project1 project1 project1'
+    'project3 project3 project3 project3 project3 topic3 topic3 topic3 topic3 resume resume resume'
+    'project3 project3 project3 project3 project3 footer footer footer footer footer footer footer'
+    'project3 project3 project3 project3 project3 footer footer footer footer footer footer footer';
 }
-
-.area-a {
-  grid-area: a;
+.portfolio {
+  grid-area: portfolio;
 }
-.area-x {
-  grid-area: x;
+.hero {
+  grid-area: hero;
 }
-.area-y {
-  grid-area: y;
+.topic2 {
+  grid-area: topic2;
 }
-.area-b {
-  grid-area: b;
+.topic1 {
+  grid-area: topic1;
 }
-.area-c {
-  grid-area: c;
+.project1 {
+  grid-area: project1;
 }
-.area-d {
-  grid-area: d;
+.project2 {
+  grid-area: project2;
 }
-.area-e {
-  grid-area: e;
+.project3 {
+  grid-area: project3;
 }
-.area-f {
-  grid-area: f;
+.topic3 {
+  grid-area: topic3;
 }
-.area-g {
-  grid-area: g;
+.resume {
+  grid-area: resume;
 }
-.area-h {
-  grid-area: h;
+.footer {
+  grid-area: footer;
 }
-.area-i {
-  grid-area: i;
-}
-.area-j {
-  grid-area: j;
+.extra1 {
+  grid-area: extra1;
 }
 
 @layer components {
